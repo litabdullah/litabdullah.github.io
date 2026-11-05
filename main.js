@@ -164,7 +164,7 @@
     let current = 'home';
     navigationSections.forEach(section => {
       if (section.getBoundingClientRect().top <= innerHeight * 0.4) {
-        current = section.id === 'project-catalogue' ? 'work' : section.id;
+        current = section.id;
       }
     });
     navigationLinks.forEach(link => {
