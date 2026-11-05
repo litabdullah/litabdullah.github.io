@@ -14,7 +14,7 @@
     { id: 'angular', name: 'Angular', icon: 'angular', type: 'WEB FRAMEWORK', group: 'engineering', description: 'The application framework behind HireGrip’s resume and job-matching experience.', projects: ['HireGrip'] },
     { id: 'dotnet', name: '.NET', icon: 'dotnet', type: 'APPLICATION PLATFORM', group: 'engineering', description: 'Backend application architecture supporting resume analysis, job matching, and document workflows.', projects: ['HireGrip'] },
     { id: 'gemini', name: 'Gemini', icon: 'gemini', type: 'AI INTEGRATION', group: 'engineering', description: 'AI assistance connected to practical product workflows, including career tools and turning structured ideas into code.', projects: ['HireGrip', 'System Blueprint to Code Generator'] },
-    { id: 'python', name: 'Python', icon: 'python', type: 'LANGUAGE', group: 'engineering', description: 'Exploration through code, including a colour-detection project in the public GitHub collection.', projects: ['Colour Detection'] },
+    { id: 'python', name: 'Python', icon: 'python', type: 'LANGUAGE', group: 'engineering', description: 'Practical exploration through code, including colour detection and image analysis.', projects: ['Colour Detection'] },
     { id: 'git', name: 'Git', icon: 'git', type: 'VERSION CONTROL', group: 'engineering', description: 'A consistent way to evolve the work, track changes, and connect development across products.', projects: ['Web products', 'Android collection'] },
     { id: 'githubactions', name: 'GitHub Actions', icon: 'githubactions', type: 'BUILD WORKFLOW', group: 'engineering', description: 'Automated build workflows that support repeatable development and release preparation.', projects: ['HireGrip', 'Android build workflows'] },
     { id: 'firebase', name: 'Firebase', icon: 'firebase', type: 'APP PLATFORM', group: 'platforms', description: 'Managed app services for authentication, cloud data, and release workflows.', projects: ['Authentication', 'Cloud Firestore', 'App hosting'], label: 'WHAT IT SUPPORTS' },
@@ -164,7 +164,7 @@
     let current = 'home';
     navigationSections.forEach(section => {
       if (section.getBoundingClientRect().top <= innerHeight * 0.4) {
-        current = ['project-catalogue', 'code'].includes(section.id) ? 'work' : section.id;
+        current = section.id === 'project-catalogue' ? 'work' : section.id;
       }
     });
     navigationLinks.forEach(link => {
