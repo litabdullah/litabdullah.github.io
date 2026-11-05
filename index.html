@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Muhammad Abdullah — technical project manager and independent product builder. Explore software, mobile apps, and the toolkit behind the work.">
+  <meta name="theme-color" content="#f7f7fb" id="theme-color">
+  <title>Muhammad Abdullah — Ideas into experiences.</title>
+  <script>try{document.documentElement.dataset.theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){}</script>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="images/portrait.jpg" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="work.css">
+  <link rel="stylesheet" href="gravity.css">
+  <script src="main.js" defer></script>
+  <script src="projects.js" defer></script>
+  <script src="gravity.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-progress" id="page-progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <a href="#home" class="identity" aria-label="Muhammad Abdullah home"><span class="monogram">m<span>a</span><i>✧</i></span><span class="identity-name">Muhammad<br>Abdullah</span></a>
+    <nav class="navigation" id="navigation" aria-label="Main navigation"><a href="#home" aria-current="location">About</a><a href="#work">Selected work</a><a href="#toolkit">Toolkit</a><a href="#contact">Contact <span aria-hidden="true">↗</span></a></nav>
+    <div class="header-actions"><a href="https://github.com/litabdullah" target="_blank" rel="noopener noreferrer" class="header-social" aria-label="GitHub profile"><img src="images/social/github.svg" alt="" width="19" height="19"></a><button class="icon-button theme-button" id="theme-button" aria-label="Switch to dark mode"><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A8.7 8.7 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/></svg><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg></button><button class="menu-button icon-button" id="menu-button" aria-expanded="false" aria-controls="navigation" aria-label="Open navigation"><span></span><span></span></button></div>
+  </header>
+  <main id="main">
+    <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+      <div class="starfield" aria-hidden="true"></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-identity">
+            <div class="portrait-wrap"><img src="images/portrait.jpg" alt="Portrait of Muhammad Abdullah" width="1100" height="1375" fetchpriority="high"></div>
+            <div><p class="hello">Hello, I’m</p><p class="role-label">Technical project manager<br> &amp; product builder</p></div>
+          </div>
+          <h1 id="hero-title">Muhammad<br><span>Abdullah.</span></h1>
+          <p class="hero-description">I bring people, software, and ideas together.<br> Thoughtful products. Clear direction. Care in the details.</p>
+          <div class="hero-actions"><a class="button button-primary tactile" href="#work">Explore the work <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="button button-secondary tactile" href="https://www.linkedin.com/in/lit-abdullah/" target="_blank" rel="noopener noreferrer">Let’s connect <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <figure class="tech-orbit" aria-labelledby="orbit-title">
+          <p class="orbit-overline" id="orbit-title"><span class="live-dot" aria-hidden="true"></span> THE TOOLS BEHIND THE WORK</p>
+          <div class="orbit-stage">
+            <div class="orbit-track" aria-hidden="true"></div>
+            <div class="gravity-scene" aria-hidden="true">
+              <div class="gravity-art">
+                <img src="images/gravity-well.svg" alt="" width="1000" height="360">
+                <canvas class="gravity-particles" width="1000" height="360"></canvas>
+              </div>
+            </div>
+            <button class="orbit-node node-kotlin" data-pick-tech="kotlin" aria-label="Explore Kotlin and its associated apps"><img src="images/tech/kotlin.svg" alt="" width="32" height="32"><span>Kotlin</span></button>
+            <button class="orbit-node node-compose" data-pick-tech="compose" aria-label="Explore Jetpack Compose and its associated apps"><img src="images/tech/jetpackcompose.svg" alt="" width="34" height="34"><span>Compose</span></button>
+            <button class="orbit-node node-android" data-pick-tech="android" aria-label="Explore Android and its associated apps"><img src="images/tech/android.svg" alt="" width="34" height="34"><span>Android</span></button>
+            <button class="orbit-node node-typescript" data-pick-tech="typescript" aria-label="Explore TypeScript and its associated apps"><img src="images/tech/typescript.svg" alt="" width="30" height="30"><span>TypeScript</span></button>
+            <button class="orbit-node node-csharp" data-pick-tech="csharp" aria-label="Explore C# in the toolkit"><img src="images/tech/csharp.svg" alt="" width="32" height="32"><span>C#</span></button>
+            <button class="orbit-node node-angular" data-pick-tech="angular" aria-label="Explore Angular and its associated apps"><img src="images/tech/angular.svg" alt="" width="32" height="32"><span>Angular</span></button>
+            <button class="orbit-node node-dotnet" data-pick-tech="dotnet" aria-label="Explore .NET and its associated apps"><img src="images/tech/dotnet.svg" alt="" width="35" height="35"><span>.NET</span></button>
+            <button class="orbit-node node-cplusplus" data-pick-tech="cplusplus" aria-label="Explore C++ in the toolkit"><img src="images/tech/cplusplus.svg" alt="" width="32" height="32"><span>C++</span></button>
+            <button class="orbit-node node-gemini" data-pick-tech="gemini" aria-label="Explore Gemini and its associated apps"><img src="images/tech/gemini.svg" alt="" width="32" height="32"><span>Gemini</span></button>
+            <button class="orbit-node node-python" data-pick-tech="python" aria-label="Explore Python and its associated apps"><img src="images/tech/python.svg" alt="" width="31" height="31"><span>Python</span></button>
+          </div>
+          <figcaption class="orbit-legend"><span>Select a tool to explore the toolkit.</span><a href="#toolkit">Open toolkit <span aria-hidden="true">↗</span></a></figcaption>
+        </figure>
+      </div>
+      <div class="hero-bottom"><a class="scroll-link" href="#work"><span aria-hidden="true">↓</span> SELECTED WORK</a><span class="edition">PERSONAL PORTFOLIO <em>’26</em></span></div>
+    </section>
+
+    <section id="work" class="selected-work section-shell" aria-labelledby="work-title">
+      <div class="section-heading work-intro reveal"><p class="eyebrow">01 / IDEAS IN THE WORLD</p><h2 id="work-title">A little curiosity.<br><em>A world of possibilities.</em></h2><p class="section-description">Products, ventures, and experiments.<br>Different problems. The same care in making them.</p></div>
+      <div class="collection-label"><span>SELECTED VENTURES</span><span>01 — 04</span></div>
+      <div class="featured-grid">
+        <article class="featured-card reveal" style="--project-color:#68bb9b"><button class="featured-preview" data-open-project="hiregrip" aria-label="Explore HireGrip"><img src="images/hiregrip.jpg" alt="HireGrip resume matching and ATS analysis interface" width="1280" height="800" loading="lazy"><span class="preview-arrow" aria-hidden="true">↗</span></button><div class="featured-copy"><p class="project-category">CAREER TECHNOLOGY</p><h3>HireGrip</h3><p>A clearer path from your experience to your next opportunity.</p><div class="project-tags"><span>Angular</span><span>.NET</span><span>Gemini</span></div><div class="featured-actions"><button data-open-project="hiregrip">Explore project <span aria-hidden="true">↗</span></button><a href="https://hiregrip.app/" target="_blank" rel="noopener noreferrer" aria-label="Visit HireGrip website">Live site ↗</a></div></div></article>
+        <article class="featured-card reveal" style="--project-color:#bca578"><button class="featured-preview" data-open-project="aurelius" aria-label="Explore Aurelius"><img src="images/aurelius.jpg" alt="Aurelius chauffeur platform journey-planning interface" width="1425" height="990" loading="lazy"><span class="preview-arrow" aria-hidden="true">↗</span></button><div class="featured-copy"><p class="project-category">TRANSPORT & BOOKING</p><h3>Aurelius</h3><p>A considered booking experience, from departure to arrival.</p><div class="project-tags"><span>TypeScript</span><span>Express</span></div><div class="featured-actions"><button data-open-project="aurelius">Explore project <span aria-hidden="true">↗</span></button></div></div></article>
+        <article class="featured-card reveal" style="--project-color:#c8a958"><button class="featured-preview brand-preview hateem-preview" data-open-project="hateem" aria-label="Explore Hateem"><img src="images/hateem.jpg" alt="Hateem gold architectural brand identity" width="800" height="800" loading="lazy"><span class="preview-arrow" aria-hidden="true">↗</span></button><div class="featured-copy"><p class="project-category">MOBILE & EVERYDAY FAITH</p><h3>Hateem</h3><p>Prayer reminders and daily reflection, brought closer.</p><div class="project-tags"><span>Kotlin</span><span>Compose</span><span>Android</span></div><div class="featured-actions"><button data-open-project="hateem">Explore project <span aria-hidden="true">↗</span></button></div></div></article>
+        <article class="featured-card reveal" style="--project-color:#8cae68"><button class="featured-preview brand-preview momo-preview" data-open-project="momo-lab" aria-label="Explore Momo Lab"><img src="images/momo-lab.jpg" alt="Momo Lab dumpling chef identity" width="800" height="787" loading="lazy"><span class="preview-arrow" aria-hidden="true">↗</span></button><div class="featured-copy"><p class="project-category">FOOD & BRAND EXPERIENCE</p><h3>Momo Lab</h3><p>A love for good food, turned into a brand with its own character.</p><div class="project-tags"><span>Brand</span><span>Hospitality</span></div><div class="featured-actions"><button data-open-project="momo-lab">Explore project <span aria-hidden="true">↗</span></button><a href="https://www.foodpanda.pk/restaurant/ta1s/momo-lab-ta1s" target="_blank" rel="noopener noreferrer" aria-label="Explore Momo Lab on Foodpanda">Discover ↗</a></div></div></article>
+      </div>
+      <a class="collection-jump" href="#project-catalogue">There’s more to explore <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section id="project-catalogue" class="project-catalogue section-shell" aria-labelledby="catalogue-title">
+      <div class="catalogue-heading reveal"><div><p class="eyebrow">02 / THE PRODUCT LAB</p><h2 id="catalogue-title">Made for the everyday.<br><em>Built for what’s next.</em></h2></div><p>Native apps, practical tools,<br>and ideas taking their first shape.</p></div>
+      <div class="catalogue-controls">
+        <div class="catalogue-topline"><div class="project-filters" role="group" aria-label="Filter projects"><button data-project-filter="all" aria-pressed="true">All projects</button><button data-project-filter="android" aria-pressed="false">Android</button><button data-project-filter="ai" aria-pressed="false">AI Studio</button></div><div class="view-switch" role="group" aria-label="Project layout"><button data-view="grid" aria-label="Grid view" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/><rect x="3" y="15" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/></svg></button><button data-view="list" aria-label="List view" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h13M8 12h13M8 19h13M3 5h.1M3 12h.1M3 19h.1"/></svg></button></div></div>
+        <div class="catalogue-searchline"><label class="project-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">Search projects or technologies</span><input type="search" id="project-search" placeholder="Find a project, language, or tool…" autocomplete="off" maxlength="100"></label><label class="stack-select"><span class="sr-only">Filter by technology</span><select id="stack-filter"><option value="all">All technologies</option></select><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 9 5 5 5-5"/></svg></label></div>
+      </div>
+      <div class="catalogue-result-line"><p id="project-count" role="status" aria-live="polite"></p><span>SELECT A PROJECT TO EXPLORE</span></div>
+      <div id="project-grid" class="project-grid" data-view="grid"></div>
+      <noscript><p class="no-script-note">The interactive catalogue needs JavaScript. Selected ventures above and social links remain available.</p></noscript>
+    </section>
+
+    <section id="code" class="code-section section-shell" aria-labelledby="code-title"><div class="code-panel"><div class="code-heading"><div class="code-heading-mark" aria-hidden="true"><img src="images/social/github.svg" alt="" width="30" height="30"></div><div><p class="eyebrow">03 / OUT IN THE OPEN</p><h2 id="code-title">A look at the code.</h2></div><a class="github-profile-link" href="https://github.com/litabdullah" target="_blank" rel="noopener noreferrer">@litabdullah <span aria-hidden="true">↗</span></a></div><p class="code-description">Small experiments and shared code, from my public GitHub collection.</p><div class="repo-toolbar"><span><i class="live-dot" aria-hidden="true"></i> PUBLIC REPOSITORIES</span><span id="repository-count"></span></div><div id="repository-list"></div><div class="repo-footer"><p id="repository-status" role="status" aria-live="polite">Loading public projects…</p><button id="repo-retry" type="button" hidden>Try again <span aria-hidden="true">↻</span></button><a href="https://github.com/litabdullah?tab=repositories" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a></div></div></section>
+
+    <section id="toolkit" class="toolkit section-shell" aria-labelledby="toolkit-title">
+      <div class="section-heading reveal"><p class="eyebrow">04 / THE TOOLKIT</p><h2 id="toolkit-title">Different ideas.<br><em>The right tools.</em></h2><p class="section-description">From native Android apps to web products and technical delivery.<br>Select a technology to see where it connects to the work.</p></div>
+      <div class="toolkit-layout">
+        <div class="toolkit-library"><div class="tool-filters" role="group" aria-label="Filter technologies"><button data-tool-filter="all" aria-pressed="true">All tools</button><button data-tool-filter="engineering" aria-pressed="false">Engineering</button><button data-tool-filter="platforms" aria-pressed="false">Data & content</button><button data-tool-filter="delivery" aria-pressed="false">Delivery</button></div><div class="tool-grid" id="tool-grid" aria-label="Technology collection"></div></div>
+        <div class="tool-detail" id="tool-detail" aria-labelledby="tool-title" tabindex="-1"><div class="tool-detail-top"><span class="eyebrow" id="tool-type">LANGUAGE</span><span class="tool-detail-symbol" aria-hidden="true">↗</span></div><img id="tool-image" src="images/tech/kotlin.svg" alt="" width="52" height="52"><h3 id="tool-title">Kotlin</h3><p id="tool-description">The language behind a growing collection of native Android experiences.</p><div class="association"><span id="association-label">IN THE WORK</span><div id="tool-projects"><span>Hateem</span><span>Mio</span><span>AI PDF Tools</span><span>Hotel POS</span><span>Image Master Suite</span><span>Audio Master Suite</span></div></div><span class="tool-detail-foot">A CONNECTION BETWEEN THINKING AND MAKING.</span></div>
+      </div><p class="sr-only" id="tool-announcement" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="contact" class="contact section-shell" aria-labelledby="contact-title"><div class="contact-inner reveal"><p class="eyebrow">05 / START A CONVERSATION</p><a class="contact-title-link" href="https://www.linkedin.com/in/lit-abdullah/" target="_blank" rel="noopener noreferrer"><h2 id="contact-title">Something in mind?<br><em>Let’s connect.</em></h2><span aria-hidden="true">↗</span></a><p>For product conversations, thoughtful collaborations,<br>and the next good idea.</p><div class="social-links" aria-label="Social profiles"><a href="https://www.linkedin.com/in/lit-abdullah/" target="_blank" rel="noopener noreferrer"><img src="images/social/linkedin.svg" alt="" width="18" height="18">LinkedIn</a><a href="https://github.com/litabdullah" target="_blank" rel="noopener noreferrer"><img src="images/social/github.svg" alt="" width="18" height="18">GitHub</a><a href="https://www.instagram.com/lit.abdullah/" target="_blank" rel="noopener noreferrer"><img src="images/social/instagram.svg" alt="" width="18" height="18">Instagram</a><a href="https://soundcloud.com/muhammad-abdullah-138891820" target="_blank" rel="noopener noreferrer"><img src="images/social/soundcloud.svg" alt="" width="18" height="18">SoundCloud</a><a href="https://x.com/abdullahlit" target="_blank" rel="noopener noreferrer"><img src="images/social/x.svg" alt="" width="18" height="18">X</a><a href="https://www.facebook.com/lit.abdullah" target="_blank" rel="noopener noreferrer"><img src="images/social/facebook.svg" alt="" width="18" height="18">Facebook</a><a href="https://www.snapchat.com/add/lit.abdullah1" target="_blank" rel="noopener noreferrer"><img src="images/social/snapchat.svg" alt="" width="18" height="18">Snapchat</a><a href="https://play.google.com/store/apps/dev?id=6898751755730675916" target="_blank" rel="noopener noreferrer"><img src="images/social/googleplay.svg" alt="" width="18" height="18">Google Play</a></div></div></section>
+  </main>
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="project-dialog-title"><div class="dialog-bar"><span>PROJECT OVERVIEW</span><button id="close-project" class="icon-button" aria-label="Close project"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div id="project-dialog-content"></div></dialog>
+  <footer class="site-footer section-shell"><a href="#home" class="footer-mark" aria-label="Back to home">ma<span>✧</span></a><span>© 2026 Muhammad Abdullah</span><button id="back-top" aria-label="Back to top">BACK TO TOP <span aria-hidden="true">↑</span></button></footer>
+</body>
+</html>
+
+

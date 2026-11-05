@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Velvet &amp; Bears">
+  <rect width="256" height="256" fill="#213729"/>
+  <circle cx="128" cy="128" r="100" fill="#D3AC61"/>
+  <circle cx="128" cy="128" r="91" fill="#213729"/>
+  <circle cx="128" cy="128" r="79" fill="#F3E5C4"/>
+  <path fill="#684632" d="M68 106a17 17 0 1 1 25-23c8-3 17-3 26-1a17 17 0 1 1 25 23 40 40 0 0 1 5 20c0 24-18 40-44 40s-44-16-44-40c0-7 2-13 7-19z"/>
+  <ellipse cx="105" cy="139" rx="17" ry="12" fill="#E2BE8A"/>
+  <path d="M100 136q5-5 10 0l-5 5z" fill="#37241C"/>
+  <circle cx="91" cy="124" r="4.5" fill="#F3E5C4"/>
+  <circle cx="119" cy="124" r="4.5" fill="#F3E5C4"/>
+  <path fill="#B98350" stroke="#F3E5C4" stroke-width="4" d="M129 133a13 13 0 1 1 19-18c7-2 13-2 20 0a13 13 0 1 1 19 18c4 5 6 11 6 17 0 19-14 32-35 32s-35-13-35-32c0-6 2-12 6-17z"/>
+  <ellipse cx="158" cy="160" rx="13" ry="9" fill="#F3D5A4"/>
+  <path d="M154 158q4-4 8 0l-4 4z" fill="#37241C"/>
+  <circle cx="147" cy="148" r="4" fill="#37241C"/>
+  <circle cx="169" cy="148" r="4" fill="#37241C"/>
+</svg>

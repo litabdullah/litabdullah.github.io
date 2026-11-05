@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="SeekTune">
+  <rect width="256" height="256" fill="#102A20"/>
+  <path d="M37 78V37h43M219 178v41h-43" fill="none" stroke="#4BD978" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path fill="#F8FBF7" d="M125 83H85l-21 19v23l19 17h24l8 7v7l-8 7H64v20h51l21-19v-23l-18-17H94l-8-7v-7l8-7h31z"/>
+  <path fill="#4BD978" d="M137 83h60v20h-20v80h-21v-80h-19z"/>
+</svg>

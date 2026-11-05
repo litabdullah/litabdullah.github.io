@@ -1,0 +1,231 @@
+/* The identity and the interactive orbit share a single hero composition. */
+.hero {
+  padding-block: clamp(52px, 5.5vw, 88px) 24px;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.14fr);
+  gap: clamp(36px, 5vw, 76px);
+  min-height: 0;
+}
+
+.hero-identity {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 23px;
+}
+
+.hero-identity .portrait-wrap {
+  width: 72px;
+  height: 72px;
+  margin: 0;
+  padding: 3px;
+}
+
+.hero-identity .hello {
+  margin-bottom: 3px;
+}
+
+.hero-identity .role-label {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: .65px;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  font-size: clamp(48px, 5.6vw, 80px);
+  letter-spacing: -.055em;
+}
+
+.hero-bottom {
+  margin-top: clamp(26px, 4vw, 48px);
+  padding-top: 18px;
+}
+
+.tech-orbit {
+  --satellite-size: clamp(48px, 4.7vw, 66px);
+  margin: 0;
+  min-width: 0;
+}
+
+.orbit-overline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 400 10px/1.5 Mono, monospace;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.orbit-overline::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+}
+
+.orbit-stage {
+  position: relative;
+  isolation: isolate;
+  height: clamp(280px, 28vw, 378px);
+  margin-block: 10px;
+}
+
+.orbit-track {
+  position: absolute;
+  z-index: -2;
+  inset: 13% 10% 13%;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  transform: rotate(-10deg);
+  pointer-events: none;
+}
+
+.gravity-scene {
+  position: absolute;
+  inset: 0 -8%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.gravity-art {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(900px, 110%);
+  aspect-ratio: 1000 / 360;
+  /* The event horizon is at y=162 in the 360-unit illustration. */
+  transform: translate(-50%, -45%);
+}
+
+.gravity-art > img,
+.gravity-particles {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.orbit-stage .orbit-node {
+  inset: auto;
+  top: var(--node-y);
+  left: var(--node-x);
+  width: var(--satellite-size);
+  height: var(--satellite-size);
+  gap: 4px;
+  translate: -50% -50%;
+  transform: none;
+  animation: satellite-drift 8s ease-in-out var(--drift-delay, 0s) infinite;
+}
+
+.orbit-stage .orbit-node:is(:hover, :focus-visible) {
+  z-index: 1;
+  transform: translateY(-3px) scale(1.06);
+  animation-play-state: paused;
+}
+
+.orbit-stage .orbit-node img {
+  width: clamp(19px, 2vw, 27px);
+  height: clamp(19px, 2vw, 27px);
+}
+
+.node-kotlin { --node-x: 12%; --node-y: 28%; --drift-delay: -1s; }
+.node-compose { --node-x: 28%; --node-y: 14%; --drift-delay: -3s; }
+.node-android { --node-x: 48%; --node-y: 13%; --drift-delay: -4.5s; }
+.node-typescript { --node-x: 69%; --node-y: 14%; --drift-delay: -2s; }
+.node-csharp { --node-x: 88%; --node-y: 29%; --drift-delay: -4s; }
+.node-angular { --node-x: 88%; --node-y: 70%; --drift-delay: -5s; }
+.node-dotnet { --node-x: 70%; --node-y: 86%; --drift-delay: -2.5s; }
+.node-cplusplus { --node-x: 49%; --node-y: 88%; --drift-delay: -5.5s; }
+.node-gemini { --node-x: 28%; --node-y: 86%; --drift-delay: -6s; }
+.node-python { --node-x: 11%; --node-y: 68%; --drift-delay: -3.5s; }
+
+@keyframes satellite-drift {
+  50% { translate: -50% calc(-50% - 4px); }
+}
+
+.orbit-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.orbit-legend a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.orbit-legend a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media screen and (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 37px;
+  }
+
+  .hero-copy,
+  .tech-orbit {
+    width: min(100%, 600px);
+    margin-inline: auto;
+  }
+
+  .orbit-stage {
+    height: clamp(205px, 53vw, 365px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero {
+    padding-top: 38px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(37px, 11vw, 64px);
+  }
+
+  .hero-identity .portrait-wrap {
+    width: 56px;
+    height: 56px;
+  }
+
+  .hero-identity {
+    margin-bottom: 18px;
+  }
+
+  .tech-orbit {
+    --satellite-size: clamp(44px, 10vw, 56px);
+  }
+
+  .orbit-legend {
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gravity-particles {
+    display: none;
+  }
+}
+
+@media print {
+  .hero-grid { display: block; }
+  .tech-orbit { display: none; }
+}

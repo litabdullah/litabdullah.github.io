@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360">
+  <defs>
+    <radialGradient id="nebula">
+      <stop stop-color="#7652cb" stop-opacity=".48"/>
+      <stop offset=".44" stop-color="#8d61ed" stop-opacity=".23"/>
+      <stop offset="1" stop-color="#a070ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core" cx=".38" cy=".43" r=".7">
+      <stop offset=".55" stop-color="#05040e"/>
+      <stop offset=".86" stop-color="#0b071a"/>
+      <stop offset="1" stop-color="#23113f"/>
+    </radialGradient>
+    <linearGradient id="disk-light" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop stop-color="#8156ca" stop-opacity="0"/>
+      <stop offset=".16" stop-color="#8750ea" stop-opacity=".46"/>
+      <stop offset=".39" stop-color="#b889ff"/>
+      <stop offset=".54" stop-color="#fff1fb"/>
+      <stop offset=".64" stop-color="#e9c0ff"/>
+      <stop offset=".81" stop-color="#9958ff" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#8156ca" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lens-light" x1="0" y1="1" x2=".8" y2=".12">
+      <stop stop-color="#6f35c1" stop-opacity=".25"/>
+      <stop offset=".42" stop-color="#af7eff"/>
+      <stop offset=".73" stop-color="#f9dbff"/>
+      <stop offset="1" stop-color="#9967f4" stop-opacity=".76"/>
+    </linearGradient>
+    <filter id="wide-bloom" filterUnits="userSpaceOnUse" x="0" y="0" width="1000" height="340">
+      <feGaussianBlur stdDeviation="17"/>
+    </filter>
+    <filter id="soft-bloom" filterUnits="userSpaceOnUse" x="0" y="0" width="1000" height="340">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <path id="lensing-arc" d="M420 184C403 135 438 83 483 80C532 70 582 101 584 151C586 164 582 178 578 187"/>
+    <path id="far-disk" d="M99 165C238 118 353 120 489 133C622 143 731 110 919 154"/>
+    <path id="front-disk" d="M74 162C224 173 329 199 436 202C551 211 694 192 927 151"/>
+    <path id="outer-disk" d="M109 171C249 189 346 217 458 222C601 224 772 181 904 161"/>
+  </defs>
+
+  <ellipse cx="500" cy="151" rx="463" ry="139" fill="url(#nebula)"/>
+  <g fill="#8b63d1" opacity=".7">
+    <circle cx="199" cy="87" r="1.15"/><circle cx="241" cy="186" r=".7"/>
+    <circle cx="309" cy="63" r=".65"/><circle cx="324" cy="236" r="1.2"/>
+    <circle cx="371" cy="96" r="1.05"/><circle cx="396" cy="215" r=".78"/>
+    <circle cx="446" cy="55" r="1.1"/><circle cx="535" cy="51" r=".9"/>
+    <circle cx="579" cy="249" r=".7"/><circle cx="623" cy="72" r="1.25"/>
+    <circle cx="642" cy="219" r="1.1"/><circle cx="698" cy="118" r=".65"/>
+    <circle cx="732" cy="224" r=".8"/><circle cx="808" cy="99" r="1.15"/>
+    <circle cx="851" cy="203" r=".95"/><circle cx="899" cy="127" r=".8"/>
+  </g>
+
+  <g fill="none" stroke="url(#disk-light)" transform="rotate(-10 500 162)">
+    <use href="#far-disk" stroke-width="34" opacity=".68" filter="url(#wide-bloom)"/>
+    <use href="#far-disk" stroke-width="12" opacity=".74" filter="url(#soft-bloom)"/>
+    <use href="#far-disk" stroke-width="1.5" opacity=".65"/>
+    <path d="M160 154C321 128 408 121 512 139S738 123 855 142" opacity=".46"/>
+    <path d="M185 157C311 136 403 136 463 139M626 144C732 126 815 141 880 149" opacity=".48"/>
+  </g>
+
+  <g fill="none" stroke="url(#lens-light)">
+    <use href="#lensing-arc" stroke-width="23" filter="url(#wide-bloom)"/>
+    <use href="#lensing-arc" stroke-width="10" filter="url(#soft-bloom)"/>
+    <use href="#lensing-arc" stroke-width="2.6"/>
+    <path d="M427 174C414 137 445 92 482 90C529 81 571 109 574 146C578 162 574 177 568 184" stroke-width="1.4" opacity=".84"/>
+    <path d="M405 157C407 123 431 89 462 81M535 80C566 92 587 117 591 144" stroke-width=".8" opacity=".52"/>
+  </g>
+
+  <circle cx="500" cy="162" r="68" fill="url(#core)"/>
+  <circle cx="500" cy="162" r="68.5" fill="none" stroke="url(#lens-light)" stroke-width="1.6" opacity=".85"/>
+  <path d="M440 138A65 65 0 0 1 550 117" fill="none" stroke="#deafff" stroke-width="1" opacity=".72"/>
+
+  <g fill="none" stroke="url(#disk-light)" transform="rotate(-10 500 162)">
+    <use href="#front-disk" stroke-width="34" opacity=".86" filter="url(#wide-bloom)"/>
+    <use href="#outer-disk" stroke-width="19" opacity=".63" filter="url(#soft-bloom)"/>
+    <use href="#front-disk" stroke-width="13" opacity=".95" filter="url(#soft-bloom)"/>
+    <use href="#front-disk" stroke-width="4.2"/>
+    <use href="#outer-disk" stroke-width="1.3" opacity=".75"/>
+    <path d="M125 174C261 179 364 210 459 212C586 218 718 187 891 161" stroke-width="1.5" opacity=".82"/>
+    <path d="M164 170C297 188 373 194 466 196C600 201 743 177 867 158" stroke-width="1.1" opacity=".8"/>
+    <path d="M189 194C313 210 375 228 477 229C570 229 656 216 749 194" stroke-width=".85" opacity=".49"/>
+    <path d="M211 173C286 177 333 193 367 195M434 206C485 210 533 211 579 205M622 202C692 190 755 180 810 166" stroke-width="2" opacity=".91"/>
+  </g>
+
+  <g fill="#b581f2" opacity=".76">
+    <circle cx="287" cy="194" r=".9"/><circle cx="349" cy="199" r="1.05"/>
+    <circle cx="382" cy="209" r="1.35"/><circle cx="405" cy="227" r="1.1"/>
+    <circle cx="435" cy="213" r=".9"/><circle cx="447" cy="229" r="1.3"/>
+    <circle cx="463" cy="214" r="1.3"/><circle cx="532" cy="215" r="1.1"/>
+    <circle cx="554" cy="196" r=".9"/><circle cx="583" cy="207" r="1.3"/>
+    <circle cx="613" cy="185" r="1.1"/><circle cx="654" cy="185" r=".8"/>
+    <circle cx="681" cy="156" r="1.2"/><circle cx="722" cy="149" r=".85"/>
+  </g>
+</svg>
