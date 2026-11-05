@@ -30,7 +30,6 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
   const themeButton = document.querySelector('#theme-button');
-  let manualTheme = false;
   function applyTheme(theme) {
     root.dataset.theme = theme;
     const action = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
@@ -38,16 +37,21 @@
     themeButton?.setAttribute('title', action);
     document.querySelector('#theme-color')?.setAttribute('content', theme === 'dark' ? '#0b0a11' : '#f7f7fb');
   }
-  // A new visit always follows the system. No saved dark preference overrides
-  // a light system, and there are no authentication or API tokens in this site.
-  applyTheme(systemTheme.matches ? 'dark' : 'light');
+  // Follow the device on arrival, when its appearance changes, and on return
+  // from the browser's back/forward cache. A manual toggle is never saved.
+  function syncSystemTheme() {
+    applyTheme(systemTheme.matches ? 'dark' : 'light');
+  }
+  syncSystemTheme();
   themeButton?.addEventListener('click', () => {
-    manualTheme = true;
     applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
   });
-  systemTheme.addEventListener?.('change', event => {
-    if (!manualTheme) applyTheme(event.matches ? 'dark' : 'light');
-  });
+  if (typeof systemTheme.addEventListener === 'function') {
+    systemTheme.addEventListener('change', syncSystemTheme);
+  } else {
+    systemTheme.addListener?.(syncSystemTheme);
+  }
+  window.addEventListener('pageshow', syncSystemTheme);
 
   const menu = document.querySelector('#navigation');
   const menuButton = document.querySelector('#menu-button');

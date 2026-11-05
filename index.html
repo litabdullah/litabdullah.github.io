@@ -6,7 +6,7 @@
   <meta name="description" content="Muhammad Abdullah — technical project manager and independent product builder. Explore software, mobile apps, and the toolkit behind the work.">
   <meta name="theme-color" content="#f7f7fb" id="theme-color">
   <title>Muhammad Abdullah — Ideas into experiences.</title>
-  <script>try{document.documentElement.dataset.theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch(e){}</script>
+  <script>try{const dark=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=dark?'dark':'light';document.querySelector('#theme-color').content=dark?'#0b0a11':'#f7f7fb'}catch(e){}</script>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="images/portrait.jpg" as="image">
